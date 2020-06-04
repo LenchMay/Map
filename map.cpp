@@ -11,10 +11,10 @@ void ADD(map<string, set<string>>& Dictionary) {
     Dictionary[word2].insert(word1);
 }
 
-void COUNT(map<string, set<string>>& Dictionary) {
+int COUNT(map<string, set<string>>& Dictionary) {
     string word;
     cin >> word;
-    cout << Dictionary[word].size() << endl;
+    return Dictionary[word].size();
 }
 
 void CHECK(map<string, set<string>>& Dictionary) {
@@ -39,7 +39,7 @@ void OPERATIONS(map<string, set<string>>& Dictionary) {
             ADD(Dictionary);
         }
         else if (operation == "COUNT") {
-            COUNT(Dictionary);
+            cout << COUNT(Dictionary);
         }
         else if (operation == "CHECK") {
             CHECK(Dictionary);
